@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f9f9f9;
+  font-family: sans-serif;
+}
+
+header {
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 2;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+nav a {
+  color: #9400D3;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  margin-top: 50px;
+}
+
+form {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  font-size: 18px;
+  resize: none;
+  height: 100px;
+}
+
+/* .controls {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 10px;
+} */
+
+.char-count {
+  color: #999;
+  font-size: 14px;
+}
+
+.ajout input:hover {
+  background-color: #b300ff;
+}
+
+.ajout input {
+  background-color: #9400D3;
+  color: #fff;
+  /* float: right; */
+  display: inline-block;
+  border: none;
+  padding: 10px 50px;
+  margin-top: 15px;
+  font-size: 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #fff;
+  box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+label {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 20px;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+  .articles {
+    width: 100%;
+    margin: 0;
+  }
+  .contenu {
+    font-size: 16px;
+  }
+  .date {
+    font-size: 14px;
+  }
+  .suppr {
+    font-size: 14px;
+  }
+}
+
+/* Styles pour les écrans de plus de 600px */
+@media screen and (min-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+  .articles {
+    width: 60%;
+    margin: 0 auto;
+  }
+  .container_mess {
+    float: right;
+    margin-right: 50px;
+  }
+}
