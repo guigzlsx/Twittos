@@ -43,7 +43,7 @@ if (isset($_POST['envoi'])) {
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title text-center mb-4">Se connecter à Twittos</h4>
-                        <form action="Connect.php" method="POST">
+                        <form action="Connexion.php" method="POST">
                             <div class="form-group">
                                 <label for="prenom">Nom d'utilisateur</label>
                                 <input type="text" name="username" class="form-control" id="username"
