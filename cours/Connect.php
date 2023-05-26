@@ -3,8 +3,8 @@ session_start();
 include('database.php');
 
 // print_r($_POST);
-$username = $_POST['username'];
-$password = $_POST['password'];
+//$username = $_POST['username'];
+//$password = $_POST['password'];
 $bdd = new PDO('mysql:host=localhost;dbname=blog;charset=utf8', 'root', '');
 // On récupère les informations de l'utilisateur connecté
 // $afficher_profil = $bdd->query("SELECT * 
@@ -13,16 +13,13 @@ $bdd = new PDO('mysql:host=localhost;dbname=blog;charset=utf8', 'root', '');
 //     array($_SESSION['id'])
 // );
 // echo 'cooucou1';
-try {
+/*try {
     $recupUser = $bdd->prepare('SELECT * FROM users WHERE username = ? AND password = ?');
     $recupUser->execute([$username, $password]);
 } catch (PDOException $e) {
     die($e->getMessage());
-}
+}*/
 
-
-
-$recupUser = $recupUser->fetch();
 // print_r($recupUser);
 // die();
 ?>
@@ -40,7 +37,7 @@ $recupUser = $recupUser->fetch();
 
     <body>
         <h2>Voici le profil de
-            <?= $_POST['username'] ?>
+            <?= $_SESSION['username'] ?>
         </h2>
     </body>
 
@@ -61,8 +58,11 @@ $recupUser = $recupUser->fetch();
                 <img src="img/Batman.png" alt="Profile Picture">
             </div>
             <h1>Bienvenue sur la page de
-                <?= $_POST['username'] ?>
+                <?= $_SESSION['username'] ?>
             </h1>
+            <ul>
+                <li><a href="http://localhost/cours">Accueil</a></li>
+            </ul>
         </div>
     </header>
     <main>
