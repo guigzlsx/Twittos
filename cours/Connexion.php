@@ -9,13 +9,15 @@ if (isset($_POST['envoi'])) {
         $recupUser->execute(array($username, $password));
 
         if ($recupUser->rowCount() > 0) {
-            $_SESSION['usernsame'] = $username;
+            session_start();
+            session_unset();
+            $_SESSION['username'] = $username;
             $_SESSION['password'] = $password;
             $_SESSION['id'] = $recupUser->fetch()['id']; //fetch permet de recuperer les données 
             header('Location: Connect.php');
 
         } else {
-            echo "Le mot de passe ou nom d'utilisateur est incorecte ";
+            echo "Le mot de passe ou nom d'utilisateur est incorrecte ";
         }
 
     } else {
