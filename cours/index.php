@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     && $_POST['form'] === "formulaire_ajout_article"
   ) {
     if (
-      !empty($_POST['titre']) && !empty($_POST['contenu'])
+      !empty($_POST['titre']) && !empty($_POST['contenu'] ) && !empty($_POST['tag']  ) && !empty($_POST['img']  )
     ) {
       $titre = $_POST['titre'];
       $contenu = $_POST['contenu'];
