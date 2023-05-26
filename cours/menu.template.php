@@ -1,6 +1,8 @@
 <nav class="navbar">
   <img src="img/twitter.png" alt="Twitter">
 
+  <button class="navbar-bouton">Sidebar</button>
+
 
   <div class="nav-links">
     <form action="" method="GET">
