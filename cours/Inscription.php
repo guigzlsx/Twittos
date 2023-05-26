@@ -13,10 +13,10 @@ if (isset($_POST['envoi'])) {
             $_SESSION['usernsame'] = $username;
             $_SESSION['password'] = $password;
             $_SESSION['id'] = $recupUser->fetch()['id']; //fetch permet de recuperer les données 
-            // header('Location: index.template.php');
+            header('Location: index.php');
         }
 
-        echo $_SESSION['id'];
+        // echo $_SESSION['id'];
 
 
 
