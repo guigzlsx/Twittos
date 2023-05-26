@@ -1,6 +1,7 @@
 html,
 body {
   height: 100%;
+  background-color: #dcdcdc;
 }
 
 * {
@@ -13,9 +14,14 @@ header {
   top: 0;
   width: 100%;
   height: 60px;
-  background-color: #9400D3;
+  background-color: #9400d3;
   padding-bottom: 15px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.page {
+  width: 908px;
+  margin: auto;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 main {
@@ -57,7 +63,7 @@ footer {
 
 .navbar .nav-links li a {
   text-decoration: none;
-  color: #9400D3;
+  color: #9400d3;
 }
 
 .nav-title P {
@@ -143,7 +149,7 @@ footer {
 
 /* Responsive Navbar */
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .navbar {
     padding: 0;
   }
@@ -182,13 +188,13 @@ footer {
   .navbar form {
     width: 120px;
   }
-}
+} */
 
 /* Boutton de connexion  */
 
 #Connexion {
   display: inline-block;
-  background-color: #9400D3;
+  background-color: #9400d3;
   color: #fff;
   border: none;
   padding: 10px 50px;
@@ -203,14 +209,14 @@ footer {
 }
 
 #Connexion:hover {
-  background-color: #9400D3;
+  background-color: #9400d3;
 }
 
 /* Bouton d'Inscritption */
 
 #Inscription {
   display: inline-block;
-  background-color: #9400D3;
+  background-color: #9400d3;
   color: #fff;
   border: none;
   padding: 10px 50px;
@@ -242,7 +248,7 @@ footer {
 }
 
 .tweet-btn {
-  background-color: #9400D3;
+  background-color: #9400d3;
   color: #fff;
   border: none;
   border-radius: 9999px;
@@ -258,14 +264,32 @@ footer {
 }
 
 .tweet-btn:hover {
-  background-color: #9400D3;
+  background-color: #9400d3;
 }
 
 /* Apparence des Tweets */
 
+
+
+/* Animation d'un élément */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Utilisation des keyframes */
+.articles {
+  /* ... Vos autres propriétés ... */
+  animation: fadeIn 1s ease-in-out;
+}
+
 .articles {
   border: 1px solid #ddd;
-  padding: 10px;
+  padding: 50px;
   margin-bottom: 20px;
   background-color: #fff;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
@@ -284,13 +308,13 @@ footer {
 
 .articles .date {
   font-size: 12px;
-  color: #999;
+  color: #535252;
   margin-top: 5px;
 }
 
 .suppr input {
   display: inline-block;
-  background-color: #9400D3;
+  background-color: #9400d3;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -347,7 +371,7 @@ footer {
 }
 
 #close-btn {
-  display: inline-block; 
+  display: inline-block;
   background-color: #f21d1d;
   color: #fff;
   border: none;
@@ -371,4 +395,134 @@ footer {
   justify-content: space-between;
   align-items: center;
   list-style-type: none;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #9400d3;
+  overflow-x: hidden;
+  padding-top: 20px;
+  transition: 0.5s;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+.sidenav a:hover {
+  color: #000000;
+}
+
+.content {
+  margin-left: 200px;
+  padding: 20px;
+  transition: 0.5s;
+}
+
+.active {
+  width: 200px;
+}
+
+.navbar-bouton {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: #9400d3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.navbar-bouton:hover {
+  background-color: #7e04b2;
+}
+
+.navbar-bouton:active {
+  background-color: #7e04b2;
+}
+
+/* Grid */
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.item {
+  background-color: #ddd;
+  padding: 20px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* Elements Tag  */
+.tag {
+  padding: 5px 10px;
+  margin-right: 10px;
+  background-color: #eee;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tag.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Couleurs par défaut */
+.tags {
+  background-color: #f2f2f2;
+}
+
+.article {
+  background-color: #ffffff;
+}
+
+/* Styles lorsque le filtre est appliqué */
+.tags.filtered {
+  background-color: #e6e6e6;
+}
+
+.article.filtered {
+  background-color: #f8f8f8;
+}
+
+/* Styles pour chaque tag */
+.article[data-tag="rouge"] {
+  border: 2px solid red;
+}
+
+.article[data-tag="vert"] {
+  border: 2px solid green;
+}
+
+.article[data-tag="bleu"] {
+  border: 2px solid blue;
+}
+
+.image_tweet img {
+  width: 100px;
 }
